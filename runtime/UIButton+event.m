@@ -64,8 +64,26 @@
         
         kclass = objc_allocateClassPair([self class], [className UTF8String], 0);
     }
+    
+    
+    /******为类创建方法******/
+    
+    //为kclass添加一个NSString类型的成员变量stuName
+    class_addIvar(kclass, "_stuName", sizeof(NSString *), 0, "@");
+    //为kclass添加一个stuSex属性
+    NSString *propertyName = @"stuSex";
+    //在添加属性的时候需要关联一个成员变量
+    class_addIvar(kclass, [propertyName UTF8String], sizeof(NSString *), 0, "@");
+    objc_property_attribute_t type = { "T", "@\"NSString\"" };
+    objc_property_attribute_t ownership = { "C", "copy" };
+    objc_property_attribute_t backingivar  = { "V", [propertyName UTF8String]};
+    objc_property_attribute_t attrs[] = { type, ownership, backingivar };
+    BOOL isOk=class_addProperty(kclass, [propertyName UTF8String], attrs, 3);
+    
+ 
+    
     SEL setterSelector = NSSelectorFromString(@"sendAction:to:forEvent:");
-    //
+    //获取实例中的点击响应方法
     Method setterMethod = class_getInstanceMethod([self class], setterSelector);
     /*
      将一个类变为另一个类返回原来的类
@@ -75,34 +93,35 @@
     object_setClass(self, kclass);
     //
     const char *types = method_getTypeEncoding(setterMethod);
-    //注册类和事件
+    //给类添加事件
     class_addMethod(kclass, setterSelector, (IMP)camerapermission_SendAction, types);
     
+    //注册类
     objc_registerClassPair(kclass);
 }
 
 static void camerapermission_SendAction(id self, SEL _cmd, SEL action ,id target , UIEvent *event)
 {
-    struct objc_super superclass = {
-        .receiver = self,
-        .super_class = class_getSuperclass(object_getClass(self))
-    };
-    
-    void (*objc_msgSendSuperCasted)(const void *, SEL, SEL, id, UIEvent*) = (void *)objc_msgSendSuper;
-    AVAuthorizationStatus authStatus =  [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied){
-        
-    }else if(authStatus == AVAuthorizationStatusNotDetermined){
-        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-            if(granted){
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    objc_msgSendSuperCasted(&superclass, _cmd,action,target,event);
-                });
-            }
-        }];
-    }else{
-        objc_msgSendSuperCasted(&superclass, _cmd,action,target,event);
-    }
+//    struct objc_super superclass = {
+//        .receiver = self,
+//        .super_class = class_getSuperclass(object_getClass(self))
+//    };
+//
+//    void (*objc_msgSendSuperCasted)(const void *, SEL, SEL, id, UIEvent*) = (void *)objc_msgSendSuper;
+//    AVAuthorizationStatus authStatus =  [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+//    if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied){
+//
+//    }else if(authStatus == AVAuthorizationStatusNotDetermined){
+//        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+//            if(granted){
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    objc_msgSendSuperCasted(&superclass, _cmd,action,target,event);
+//                });
+//            }
+//        }];
+//    }else{
+//        objc_msgSendSuperCasted(&superclass, _cmd,action,target,event);
+//    }
 }
 
 @end

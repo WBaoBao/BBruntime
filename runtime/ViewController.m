@@ -130,6 +130,10 @@ void runPlay(id self ,SEL _cmd){
 {
     if (aSEL ==  NSSelectorFromString(@"runPlay")) {
         //注册事件
+        //    第一个v表示返回值类型为void,(如果是@表示返回为id)
+        //    第二个@表示的是函数的调用者类型,
+        //    第三个:表示 SEL
+        //    第四个@表示需要一个id类型的参数（如果有入参的话）
         class_addMethod(self, aSEL, (IMP) runPlay, "v@:");
         return YES;
     }

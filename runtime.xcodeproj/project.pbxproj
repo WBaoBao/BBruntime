@@ -17,6 +17,7 @@
 		1856D60020EE0BF400653C19 /* runtimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856D5FF20EE0BF400653C19 /* runtimeUITests.m */; };
 		1856D61120EE0C4800653C19 /* UIButton+event.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856D61020EE0C4800653C19 /* UIButton+event.m */; };
 		187DF88C20EEFF71008B2576 /* DWExchangeTwoMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DF88B20EEFF71008B2576 /* DWExchangeTwoMethod.m */; };
+		187DF88F20EF52F4008B2576 /* Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DF88E20EF52F4008B2576 /* Method.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		1856D61020EE0C4800653C19 /* UIButton+event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+event.m"; sourceTree = "<group>"; };
 		187DF88A20EEFF71008B2576 /* DWExchangeTwoMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWExchangeTwoMethod.h; sourceTree = "<group>"; };
 		187DF88B20EEFF71008B2576 /* DWExchangeTwoMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWExchangeTwoMethod.m; sourceTree = "<group>"; };
+		187DF88D20EF52F4008B2576 /* Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Method.h; sourceTree = "<group>"; };
+		187DF88E20EF52F4008B2576 /* Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Method.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				1856D5DF20EE0BF400653C19 /* ViewController.m */,
 				1856D60F20EE0C4700653C19 /* UIButton+event.h */,
 				1856D61020EE0C4800653C19 /* UIButton+event.m */,
+				187DF88D20EF52F4008B2576 /* Method.h */,
+				187DF88E20EF52F4008B2576 /* Method.m */,
 				187DF88A20EEFF71008B2576 /* DWExchangeTwoMethod.h */,
 				187DF88B20EEFF71008B2576 /* DWExchangeTwoMethod.m */,
 				1856D5E120EE0BF400653C19 /* Main.storyboard */,
@@ -279,6 +284,7 @@
 				1856D5EB20EE0BF400653C19 /* main.m in Sources */,
 				1856D61120EE0C4800653C19 /* UIButton+event.m in Sources */,
 				187DF88C20EEFF71008B2576 /* DWExchangeTwoMethod.m in Sources */,
+				187DF88F20EF52F4008B2576 /* Method.m in Sources */,
 				1856D5DD20EE0BF400653C19 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
