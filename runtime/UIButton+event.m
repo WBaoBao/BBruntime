@@ -87,6 +87,7 @@ static void camerapermission_SendAction(id self, SEL _cmd, SEL action ,id target
         .receiver = self,
         .super_class = class_getSuperclass(object_getClass(self))
     };
+    
     void (*objc_msgSendSuperCasted)(const void *, SEL, SEL, id, UIEvent*) = (void *)objc_msgSendSuper;
     AVAuthorizationStatus authStatus =  [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied){
