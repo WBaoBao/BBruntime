@@ -15,6 +15,8 @@
 		1856D5EB20EE0BF400653C19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856D5EA20EE0BF400653C19 /* main.m */; };
 		1856D5F520EE0BF400653C19 /* runtimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856D5F420EE0BF400653C19 /* runtimeTests.m */; };
 		1856D60020EE0BF400653C19 /* runtimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856D5FF20EE0BF400653C19 /* runtimeUITests.m */; };
+		1856D61120EE0C4800653C19 /* UIButton+event.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856D61020EE0C4800653C19 /* UIButton+event.m */; };
+		187DF88C20EEFF71008B2576 /* DWExchangeTwoMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DF88B20EEFF71008B2576 /* DWExchangeTwoMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		1856D5FB20EE0BF400653C19 /* runtimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = runtimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1856D5FF20EE0BF400653C19 /* runtimeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = runtimeUITests.m; sourceTree = "<group>"; };
 		1856D60120EE0BF400653C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1856D60F20EE0C4700653C19 /* UIButton+event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+event.h"; sourceTree = "<group>"; };
+		1856D61020EE0C4800653C19 /* UIButton+event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+event.m"; sourceTree = "<group>"; };
+		187DF88A20EEFF71008B2576 /* DWExchangeTwoMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWExchangeTwoMethod.h; sourceTree = "<group>"; };
+		187DF88B20EEFF71008B2576 /* DWExchangeTwoMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWExchangeTwoMethod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				1856D5DC20EE0BF400653C19 /* AppDelegate.m */,
 				1856D5DE20EE0BF400653C19 /* ViewController.h */,
 				1856D5DF20EE0BF400653C19 /* ViewController.m */,
+				1856D60F20EE0C4700653C19 /* UIButton+event.h */,
+				1856D61020EE0C4800653C19 /* UIButton+event.m */,
+				187DF88A20EEFF71008B2576 /* DWExchangeTwoMethod.h */,
+				187DF88B20EEFF71008B2576 /* DWExchangeTwoMethod.m */,
 				1856D5E120EE0BF400653C19 /* Main.storyboard */,
 				1856D5E420EE0BF400653C19 /* Assets.xcassets */,
 				1856D5E620EE0BF400653C19 /* LaunchScreen.storyboard */,
@@ -267,6 +277,8 @@
 			files = (
 				1856D5E020EE0BF400653C19 /* ViewController.m in Sources */,
 				1856D5EB20EE0BF400653C19 /* main.m in Sources */,
+				1856D61120EE0C4800653C19 /* UIButton+event.m in Sources */,
+				187DF88C20EEFF71008B2576 /* DWExchangeTwoMethod.m in Sources */,
 				1856D5DD20EE0BF400653C19 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
